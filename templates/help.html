@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+	Welocome!!!
+	{% if welcome %}
+    <a href='{% url Index %}' title='continue' class='continue'>Continue</a>
+    {% endif %}
+{% endblock %}

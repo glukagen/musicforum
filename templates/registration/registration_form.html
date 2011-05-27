@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="header">
+	<h2>Register</h2>
+</div>
+<div class='main'>
+  <form method="post" action=".">
+    {% csrf_token %}
+    
+    {% for field in form %}
+        <div class="fieldWrapper">
+		{{ field.errors }}
+		{% if field.name != 'tos' %}
+            {{ field.label_tag }}
+		{% else %}
+            <label for="id_tos">
+				I have read and agree to the <a href='{% url TOS %}' id='tosText' title='terms of service'>Terms of Service</a>
+			</label>
+		{% endif %}
+		{{ field }}
+        </div>
+    {% endfor %}
+  
+    <input type="submit" id='register_submit' value="{% trans 'Submit' %}" />
+  </form>
+</div>
+{% endblock %}

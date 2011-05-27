@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<meta http-equiv="refresh" content="2;url={% url auth_login %}">
+<div class="header">
+	<h2>Register</h2>
+</div>
+<div class='main'>
+  <p>
+    Thanks for registering! A welcome email has been sent.<br /><br />
+    You will now be taken to the site login.
+  </p>
+
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+	<h2>{{ group.name }}</h2>
+	<div>By: <a href="/user/{{ group.owner.username }}/">{{ group.owner.username }}</a></div>
+	<div></div>
+	<ul>
+		<li>Number of times listened to {{ group.name }} in past 5 years:</li>
+		<li>Length of time has followed {{ group.name }}:</li>
+	</ul>	
+	
+	<ul>
+		<li>Overall Rating</li>
+		<li>Overall Sound Quality</li>
+		<li>Coolness of Music</li>
+		<li>Freshness of sound</li>
+	</ul>	
+	
+	<h3>Public Comments</h3>
+	
+	<h3>Comments for {{ group.name }}(private):</h3>
+{% endblock %}

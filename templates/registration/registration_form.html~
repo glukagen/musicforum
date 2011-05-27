@@ -1,0 +1,7 @@
+<html>
+	<title>GotFriends</title>
+	<style type='text/css' url='{{ MEDIA_URL }}css/main.css'></style>
+	<body>
+	{% block name=content %}{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "baseTwoCol.html" %}
+{% block extraHead %}
+{% load compressed %}
+{% compressed_css 'recoded' %}
+{% endblock %}
+
+{% block sidebar %}
+{% include 'sidebarHead.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="header">
+	<h2>Terms of Service</h2>
+</div>
+<div class='main' style='white-space: pre-wrap'>
+{% include 'tosText.html' %}
+</div>
+{% endblock %}

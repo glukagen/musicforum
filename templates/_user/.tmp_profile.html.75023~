@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+	<div>Profile: {{ profile.user.username}} </div>
+	<div>Member since: {{ profile.user.date_joined|date:"F d, Y" }}</div>
+	<div>Classification: {{ profile.location }}</div>
+	<div>Forum Peer Rating: (of 5)</div>
+	<div>Profile Notes: {{ profile.website }}<br />
+		
+	</div>
+	<div>Reviews:</div>
+	<hr />
+	<table>
+		<tr><th>Company Name</th><th>Date (click to view)</th></tr>
+		{% for view in views %}
+			<tr><td>{{ view.group.name }}</td><td>{{ view.date|date:"F d, Y" }}</td></tr>
+		{% endfor %}
+	</table>
+{% endblock %}
